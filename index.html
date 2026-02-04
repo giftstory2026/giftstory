@@ -1,9 +1,372 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" dir="ltr">
 <head>
-  <title>Gift Story</title>
+    <base target="_self">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gift Story | Where Every Gift Tells A Story</title>
+    <meta name="description" content="Premium curated gift boxes that transform gifts into meaningful experiences. Luxury packaging, emotional storytelling, perfect for every occasion.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        nude: "#F5E9E0",
+                        beige: "#F8F4E9",
+                        "soft-pink": "#F2D8D8",
+                        "nude-gold": "#D4AF37",
+                        "dark-beige": "#E8DFD5"
+                    },
+                    fontFamily: {
+                        'serif': ['Playfair Display', 'serif'],
+                        'sans': ['Inter', 'sans-serif'],
+                        'arabic': ['Noto Naskh Arabic', 'serif']
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 1s ease-in-out',
+                        'fade-up': 'fadeUp 0.8s ease-out'
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' }
+                        },
+                        fadeUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .rtl {
+            direction: rtl;
+            font-family: 'Noto Naskh Arabic', serif;
+        }
+        .ltr {
+            direction: ltr;
+        }
+        .language-switch {
+            transition: all 0.3s ease;
+        }
+        .language-switch.active {
+            background-color: #D4AF37;
+            color: white;
+        }
+        .section-padding {
+            padding-top: 5rem;
+            padding-bottom: 5rem;
+        }
+        @media (max-width: 640px) {
+            .section-padding {
+                padding-top: 3rem;
+                padding-bottom: 3rem;
+            }
+        }
+    </style>
 </head>
-<body>
-  <h1>Welcome to Gift Story 🎁</h1>
+<body class="min-h-screen bg-beige ltr">
+    <!-- Language Toggle -->
+    <div class="fixed top-4 right-4 z-50 bg-white rounded-full shadow-lg p-1">
+        <div class="flex items-center">
+            <button id="lang-en" class="language-switch active px-4 py-2 rounded-full text-sm font-medium">EN</button>
+            <button id="lang-ar" class="language-switch px-4 py-2 rounded-full text-sm font-medium">AR</button>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen bg-nude flex items-center justify-center section-padding animate-fade-in">
+        <div class="container mx-auto px-4 text-center">
+            <div class="mb-8 animate-fade-up">
+                <!-- Castle Logo -->
+                <div class="w-24 h-24 mx-auto mb-6 bg-nude-gold rounded-lg flex items-center justify-center">
+                    <i class="fas fa-crown text-4xl text-white"></i>
+                </div>
+                <h1 class="text-5xl md:text-6xl font-serif font-semibold text-gray-800 mb-4" data-en="Gift Story" data-ar="قصة الهدية">Gift Story</h1>
+                <p class="text-xl md:text-2xl text-gray-600 mb-8 font-sans" data-en="WHERE EVERY GIFT TELLS A STORY" data-ar="حيث تحكي كل هدية قصة">WHERE EVERY GIFT TELLS A STORY</p>
+                <button class="bg-nude-gold text-white px-8 py-3 rounded-full font-sans font-medium text-lg hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105 animate-fade-up" data-en="Create Your Story" data-ar="ابدأ قصتك">Create Your Story</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="bg-white section-padding">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-serif font-semibold text-gray-800 mb-8" data-en="Our Story" data-ar="قصتنا">Our Story</h2>
+                <p class="text-lg text-gray-600 mb-6 font-sans leading-relaxed" data-en="Gift Story is more than just a gift brand. We create curated gift boxes that transform ordinary presents into meaningful experiences. Each box is carefully designed to tell a unique story, combining premium products with luxury packaging and emotional storytelling." data-ar="قصة الهدية ليست مجرد علامة تجارية للهدايا. نصنع صناديق هدايا مُنتقاة تحول الهدايا العادية إلى تجارب ذات معنى. كل صندوق مصمم بعناية ليروي قصة فريدة، يجمع بين منتجات فاخرة وتغليف فاخر وسرد عاطفي.">Gift Story is more than just a gift brand. We create curated gift boxes that transform ordinary presents into meaningful experiences. Each box is carefully designed to tell a unique story, combining premium products with luxury packaging and emotional storytelling.</p>
+                <p class="text-lg text-gray-600 font-sans leading-relaxed" data-en="Our mission is to make every gift moment unforgettable, turning celebrations into cherished memories that last a lifetime." data-ar="مهمتنا هي جعل كل لحظة هدية لا تُنسى، وتحويل الاحتفالات إلى ذكريات عزيزة تدوم مدى الحياة.">Our mission is to make every gift moment unforgettable, turning celebrations into cherished memories that last a lifetime.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Signature Box Section -->
+    <section class="bg-beige section-padding">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-serif font-semibold text-gray-800 mb-12 text-center" data-en="The Signature Experience" data-ar="التجربة المميزة">The Signature Experience</h2>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div class="animate-fade-up">
+                        <div class="relative">
+                            <!-- Premium Square Box -->
+                            <div class="w-64 h-64 mx-auto bg-soft-pink rounded-lg shadow-lg relative">
+                                <div class="absolute inset-0 border-2 border-nude-gold border-opacity-30 rounded-lg m-4"></div>
+                                <div class="absolute top-4 left-1/2 transform -translate-x-1/2">
+                                    <div class="w-12 h-12 bg-nude-gold rounded-full flex items-center justify-center">
+                                        <i class="fas fa-crown text-white text-xl"></i>
+                                    </div>
+                                </div>
+                                <!-- Tissue Paper Illustration -->
+                                <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2">
+                                    <div class="flex space-x-1">
+                                        <i class="fas fa-star text-nude-gold text-sm"></i>
+                                        <i class="fas fa-star text-nude-gold text-sm"></i>
+                                        <i class="fas fa-star text-nude-gold text-sm"></i>
+                                    </div>
+                                </div>
+                                <!-- Center Sticker Closure -->
+                                <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                                    <div class="w-16 h-16 bg-white rounded-full border-4 border-nude-gold flex items-center justify-center">
+                                        <span class="text-nude-gold font-serif font-bold text-sm" data-en="GS" data-ar="ق.ه">GS</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-8 text-center text-gray-500 text-sm" data-en="37×37×11 cm Premium Box" data-ar="صندوق فاخر ٣٧×٣٧×١١ سم">37×37×11 cm Premium Box</div>
+                        </div>
+                    </div>
+                    
+                    <div class="animate-fade-up">
+                        <h3 class="text-2xl font-serif font-semibold text-gray-800 mb-6" data-en="Signature Gift Box" data-ar="صندوق الهدايا المميز">Signature Gift Box</h3>
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-nude-gold mt-1 mr-3"></i>
+                                <span class="text-gray-600 font-sans" data-en="Minimal exterior with embossed castle logo" data-ar="تصميم خارجي بسيط مع شعار القلعة المنقوش">Minimal exterior with embossed castle logo</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-nude-gold mt-1 mr-3"></i>
+                                <span class="text-gray-600 font-sans" data-en="Luxury tissue paper with soft star illustrations" data-ar="ورق ناعم فاخر مع رسوم نجوم ناعمة">Luxury tissue paper with soft star illustrations</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-nude-gold mt-1 mr-3"></i>
+                                <span class="text-gray-600 font-sans" data-en="Gold foil center sticker closure" data-ar="إغلاق بملصق مركزي ذهبي">Gold foil center sticker closure</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-nude-gold mt-1 mr-3"></i>
+                                <span class="text-gray-600 font-sans" data-en="Hand-assembled with attention to every detail" data-ar="مجمّع يدوياً مع الاهتمام بكل التفاصيل">Hand-assembled with attention to every detail</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stories Section -->
+    <section class="bg-white section-padding">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-serif font-semibold text-gray-800 mb-12 text-center" data-en="Our Stories" data-ar="قصصنا">Our Stories</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Baby Story -->
+                <div class="bg-beige rounded-2xl p-8 animate-fade-up">
+                    <div class="w-16 h-16 bg-soft-pink rounded-lg flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-baby text-2xl text-nude-gold"></i>
+                    </div>
+                    <h3 class="text-2xl font-serif font-semibold text-gray-800 mb-4 text-center" data-en="Baby Story" data-ar="قصة المولود">Baby Story</h3>
+                    <p class="text-gray-600 text-center font-sans leading-relaxed" data-en="Celebrate new beginnings with our carefully curated baby gift boxes. Perfect for welcoming little ones into the world with love and care." data-ar="احتفل ببدايات جديدة مع صناديق هدايا الأطفال المُنتقاة بعناية. مثالية لاستقبال الصغار إلى العالم بالحب والرعاية.">Celebrate new beginnings with our carefully curated baby gift boxes. Perfect for welcoming little ones into the world with love and care.</p>
+                </div>
+                
+                <!-- Love Story -->
+                <div class="bg-beige rounded-2xl p-8 animate-fade-up" style="animation-delay: 0.2s">
+                    <div class="w-16 h-16 bg-soft-pink rounded-lg flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-heart text-2xl text-nude-gold"></i>
+                    </div>
+                    <h3 class="text-2xl font-serif font-semibold text-gray-800 mb-4 text-center" data-en="Love Story" data-ar="قصة الحب">Love Story</h3>
+                    <p class="text-gray-600 text-center font-sans leading-relaxed" data-en="Express your deepest emotions with our romantic gift collections. Perfect for anniversaries, Valentine's Day, or just because." data-ar="عبّر عن مشاعرك الأعمق مع مجموعات الهدايا الرومانسية. مثالية للذكرى السنوية، عيد الحب، أو لمجرد التعبير عن الحب.">Express your deepest emotions with our romantic gift collections. Perfect for anniversaries, Valentine's Day, or just because.</p>
+                </div>
+                
+                <!-- Celebration Story -->
+                <div class="bg-beige rounded-2xl p-8 animate-fade-up" style="animation-delay: 0.4s">
+                    <div class="w-16 h-16 bg-soft-pink rounded-lg flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-glass-cheers text-2xl text-nude-gold"></i>
+                    </div>
+                    <h3 class="text-2xl font-serif font-semibold text-gray-800 mb-4 text-center" data-en="Celebration Story" data-ar="قصة الاحتفال">Celebration Story</h3>
+                    <p class="text-gray-600 text-center font-sans leading-relaxed" data-en="Mark life's special moments with our celebration boxes. Birthdays, graduations, promotions, and achievements deserve extraordinary gifts." data-ar="احتفل بلحظات الحياة الخاصة مع صناديق الاحتفال. أعياد الميلاد، التخرّج، الترقيات، والإنجازات تستحق هدايا استثنائية.">Mark life's special moments with our celebration boxes. Birthdays, graduations, promotions, and achievements deserve extraordinary gifts.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Gift Story -->
+    <section class="bg-nude section-padding">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-serif font-semibold text-gray-800 mb-12 text-center" data-en="Why Gift Story" data-ar="لماذا قصة الهدية">Why Gift Story</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center animate-fade-up">
+                    <div class="w-20 h-20 bg-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-sm">
+                        <i class="fas fa-star text-2xl text-nude-gold"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-semibold text-gray-800 mb-3" data-en="Curated Premium Brands" data-ar="علامات تجارية فاخرة منتقاة">Curated Premium Brands</h3>
+                    <p class="text-gray-600 font-sans" data-en="We select only the finest products from luxury brands worldwide." data-ar="نختار فقط أفضل المنتجات من العلامات التجارية الفاخرة حول العالم.">We select only the finest products from luxury brands worldwide.</p>
+                </div>
+                
+                <div class="text-center animate-fade-up" style="animation-delay: 0.1s">
+                    <div class="w-20 h-20 bg-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-sm">
+                        <i class="fas fa-box-open text-2xl text-nude-gold"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-semibold text-gray-800 mb-3" data-en="Luxury Packaging" data-ar="تغليف فاخر">Luxury Packaging</h3>
+                    <p class="text-gray-600 font-sans" data-en="Every detail of our packaging is designed to create a memorable unboxing experience." data-ar="كل تفصيل في تغليفنا مصمم لخلق تجربة فتح لا تُنسى.">Every detail of our packaging is designed to create a memorable unboxing experience.</p>
+                </div>
+                
+                <div class="text-center animate-fade-up" style="animation-delay: 0.2s">
+                    <div class="w-20 h-20 bg-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-sm">
+                        <i class="fas fa-book-open text-2xl text-nude-gold"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-semibold text-gray-800 mb-3" data-en="Emotional Storytelling" data-ar="سرد عاطفي">Emotional Storytelling</h3>
+                    <p class="text-gray-600 font-sans" data-en="We craft narratives that transform gifts into meaningful stories and cherished memories." data-ar="نصنع روايات تحول الهدايا إلى قصص ذات معنى وذكريات عزيزة.">We craft narratives that transform gifts into meaningful stories and cherished memories.</p>
+                </div>
+                
+                <div class="text-center animate-fade-up" style="animation-delay: 0.3s">
+                    <div class="w-20 h-20 bg-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-sm">
+                        <i class="fas fa-calendar-alt text-2xl text-nude-gold"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-semibold text-gray-800 mb-3" data-en="Every Occasion" data-ar="لكل مناسبة">Every Occasion</h3>
+                    <p class="text-gray-600 font-sans" data-en="From intimate moments to grand celebrations, we have the perfect gift for every event." data-ar="من اللحظات الحميمة إلى الاحتفالات الكبرى، لدينا الهدية المثالية لكل مناسبة.">From intimate moments to grand celebrations, we have the perfect gift for every event.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark-beige py-12">
+        <div class="container mx-auto px-4">
+            <div class="text-center">
+                <!-- Logo -->
+                <div class="w-16 h-16 mx-auto mb-8 bg-nude-gold rounded-lg flex items-center justify-center">
+                    <i class="fas fa-crown text-2xl text-white"></i>
+                </div>
+                <h2 class="text-2xl font-serif font-semibold text-gray-800 mb-2" data-en="Gift Story" data-ar="قصة الهدية">Gift Story</h2>
+                
+                <!-- Tagline -->
+                <p class="text-gray-600 mb-8 font-sans max-w-md mx-auto" data-en="Crafted with care. Wrapped with love." data-ar="صُنعت بعناية. لُفّت بمحبة.">Crafted with care. Wrapped with love.</p>
+                
+                <!-- Social -->
+                <div class="flex justify-center space-x-4 mb-8">
+                    <a href="#" class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-gray-700 hover:bg-nude-gold hover:text-white transition-all duration-300">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+                
+                <!-- Copyright -->
+                <p class="text-gray-500 text-sm font-sans" data-en="© 2024 Gift Story. All rights reserved." data-ar="© ٢٠٢٤ قصة الهدية. جميع الحقوق محفوظة.">© 2024 Gift Story. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Language switching functionality
+        const langEnBtn = document.getElementById('lang-en');
+        const langArBtn = document.getElementById('lang-ar');
+        const body = document.body;
+        
+        // Define all bilingual elements
+        const bilingualElements = document.querySelectorAll('[data-en], [data-ar]');
+        
+        // Set initial language
+        let currentLang = 'en';
+        
+        // Function to switch language
+        function switchLanguage(lang) {
+            currentLang = lang;
+            
+            // Update body direction
+            if (lang === 'ar') {
+                body.classList.remove('ltr');
+                body.classList.add('rtl');
+                body.setAttribute('dir', 'rtl');
+                body.setAttribute('lang', 'ar');
+            } else {
+                body.classList.remove('rtl');
+                body.classList.add('ltr');
+                body.setAttribute('dir', 'ltr');
+                body.setAttribute('lang', 'en');
+            }
+            
+            // Update all bilingual text
+            bilingualElements.forEach(element => {
+                const text = element.getAttribute(`data-${lang}`);
+                if (text) {
+                    element.textContent = text;
+                }
+            });
+            
+            // Update active button state
+            if (lang === 'en') {
+                langEnBtn.classList.add('active');
+                langArBtn.classList.remove('active');
+            } else {
+                langArBtn.classList.add('active');
+                langEnBtn.classList.remove('active');
+            }
+        }
+        
+        // Event listeners for language buttons
+        langEnBtn.addEventListener('click', () => switchLanguage('en'));
+        langArBtn.addEventListener('click', () => switchLanguage('ar'));
+        
+        // CTA button functionality
+        const ctaButton = document.querySelector('button[data-en="Create Your Story"]');
+        ctaButton.addEventListener('click', function() {
+            alert(currentLang === 'en' ? 'Starting your gift story journey...' : 'بدء رحلة قصة الهدية الخاصة بك...');
+        });
+        
+        // Initialize animations on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+        
+        // Observe all animate-fade-up elements
+        document.querySelectorAll('.animate-fade-up').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.8s ease-out, transform 0.8s ease-out';
+            observer.observe(el);
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
