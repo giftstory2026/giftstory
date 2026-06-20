@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gift Story | Where Every Gift Tells A Story</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-creamy': '#FDFBF7', // البيج الدافئ الفاخر المائل للكريما كخلفية
+                        'brand-nude': '#F5E9E0',   // لون النود الهادئ للبطاقات والأقسام
+                        'brand-gold': '#D4AF37',   // الذهبي المطفي الراقي للتفاصيل والخطوط
+                        'brand-pink': '#F2D8D8',   // الوردي الناعم المقتبس من قلب اللوغو
+                        'brand-dark': '#2C2623'    // البني الداكن الفاخر جداً بديل الأسود التقليدي للخطوط
+                    },
+                    fontFamily: {
+                        'sans': ['Tajawal', 'sans-serif'],
+                        'serif': ['Playfair Display', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background-color: #FDFBF7;
+            color: #2C2623;
+        }
+        .serif-font {
+            font-family: 'Playfair Display', serif;
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+
+    <div class="bg-brand-nude text-brand-dark text-xs py-2 px-4 text-center font-medium tracking-wide">
+        ✨ شحن مجاني داخل جدة للمجموعات الحصرية لفترة محدودة ✨
+    </div>
+
+    <header class="sticky top-0 z-40 bg-brand-creamy/90 backdrop-blur-md border-b border-brand-nude/50 px-6 py-4 flex justify-between items-center">
+        <div class="flex items-center gap-2">
+            <div class="text-xl font-bold tracking-wider text-brand-dark flex items-center gap-1">
+                <span>GIFT STORY</span><span class="text-brand-pink text-sm">❤️</span>
+            </div>
+        </div>
+        <nav class="hidden md:flex gap-8 text-sm font-medium text-brand-dark/80">
+            <a href="#hero" class="hover:text-brand-gold transition-colors">الرئيسية</a>
+            <a href="#unboxing" class="hover:text-brand-gold transition-colors">تجربة التغليف</a>
+            <a href="#drops" class="hover:text-brand-gold transition-colors">المجموعات الحالية (Drops)</a>
+        </nav>
+        <div class="flex items-center gap-4">
+            <button onclick="toggleCart()" class="relative p-2 text-brand-dark hover:text-brand-gold transition-colors">
+                <i class="fa-solid fa-square-shopping text-2xl"></i>
+                <span id="cart-count" class="absolute -top-1 -right-1 bg-brand-gold text-brand-creamy text-xs w-5 h-5 rounded-full flex items-center justify-center font-bold">0</span>
+            </button>
+        </div>
+    </header>
+
+    <section id="hero" class="relative min-h-[85vh] flex flex-col justify-center items-center text-center px-6 bg-gradient-to-b from-brand-nude/30 to-brand-creamy">
+        <div class="max-w-3xl space-y-6">
+            <div class="inline-block text-brand-gold/40 text-6xl mb-2 animate-pulse">
+                <i class="fa-solid fa-fort-awesome"></i>
+            </div>
+            <h1 class="serif-font text-4xl md:text-6xl font-normal tracking-wide text-brand-dark">
+                Where every gift tells a story
+            </h1>
+            <p class="text-brand-dark/70 text-base md:text-lg max-w-xl mx-auto font-light leading-relaxed">
+                صناديق هدايا فاخرة ومنسقة بعناية فائقة من رحلاتنا العالمية، نجمع فيها عاطفة القطع النادرة وفخامة التفاصيل الساحرة.
+            </p>
+            <div class="pt-4">
+                <a href="#drops" class="bg-brand-dark text-brand-creamy px-8 py-3 rounded-full text-sm font-medium tracking-wider hover:bg-brand-gold hover:text-brand-dark transition-all duration-300 shadow-sm">
+                    استكشف حكاياتنا المتوفرة
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="unboxing" class="py-20 px-6 bg-brand-nude/20 border-y border-brand-nude/40">
+        <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6">
+                <div class="text-xs font-bold tracking-widest text-brand-gold uppercase">THE SIGNATURE UNBOXING</div>
+                <h2 class="text-2xl md:text-3xl font-light text-brand-dark leading-snug">صندوق فاخر صُنع ليكون جزءاً من القصة وليس مجرد غلاف</h2>
+                <p class="text-brand-dark/70 text-sm leading-relaxed">
+                    تأتي هداياكِ مستقرة داخل صندوق هندسي أبيض فاخر وخام بمقاسات حقيقية وواسعة <strong class="text-brand-dark">(40×30×10 سم)</strong>، مدمج بمقبض شريطي علوي فاخر وقفل سفلي أنيق ليغنيكِ تماماً عن الحاجة للأكياس الإضافية.
+                </p>
+                <ul class="space-y-3 text-sm text-brand-dark/80">
+                    <li class="flex items-center gap-3"><i class="fa-solid fa-wand-magic-sparkles text-brand-gold"></i> غطاء داخلي علوي يحمل لوحة القلعة السحرية كاملة وشعارنا.</li>
+                    <li class="flex items-center gap-3"><i class="fa-solid fa-moon text-brand-gold"></i> المنتجات ملفوفة بعناية بورق النجوم والهلال الساحر الحصري.</li>
+                    <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-brand-gold"></i> إغلاق مركزي محكم بواسطة الستيكر الدائري للبراند.</li>
+                    <li class="flex items-center gap-3"><i class="fa-solid fa-envelope text-brand-gold"></i> كرت الواجهة الفاخر لرسائل المشاعر، يوضع أولاً ليكون اللمسة الأولى.</li>
+                </ul>
+            </div>
+            <div class="relative bg-white p-8 rounded-2xl shadow-xl border border-brand-nude max-w-sm mx-auto text-center space-y-4">
+                <div class="absolute -top-4 -right-4 bg-brand-pink text-brand-dark text-xs font-bold px-3 py-1 rounded-full shadow-sm">
+                    قياس دقيق: 40×30×10 سم
+                </div>
+                <div class="w-full h-48 bg-brand-creamy rounded-xl border border-dashed border-brand-gold/30 flex flex-col justify-center items-center text-brand-gold/60 gap-2">
+                    <i class="fa-solid fa-box-open text-4xl"></i>
+                    <span class="text-xs font-medium text-brand-dark/50">تصميم البوكس الخام الأبيض (حقيبة فخمة)</span>
+                </div>
+                <div class="text-sm font-semibold text-brand-dark">شريط الستان الذهبي المطفي (Ribbon) الرسمي</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="drops" class="py-20 px-6 max-w-6xl mx-auto">
+        <div class="text-center space-y-2 mb-16">
+            <h2 class="serif-font text-3xl md:text-4xl font-normal text-brand-dark">المجموعات المتوفرة الحالية</h2>
+            <p class="text-brand-dark/60 text-xs tracking-widest font-light uppercase">قطعة واحدة فريدة ومكتملة من كل صندوق لضمان الندرة والحصرية</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 justify-center">
+            <div class="bg-white rounded-2xl border border-brand-nude overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col group">
+                <div class="relative bg-brand-creamy h-64 flex items-center justify-center overflow-hidden p-6">
+                    <div class="w-full h-full bg-brand-nude/40 rounded-xl flex flex-col justify-center items-center text-brand-dark/40 gap-2 text-center">
+                        <i class="fa-solid fa-baby-carriage text-4xl text-brand-gold/50"></i>
+                        <span class="text-xs px-4 text-brand-dark/70 font-medium">تصاميم ومستلزمات مواليد ديزني المنسقة الفاخرة (ثيم دامبو/ميكي)</span>
+                    </div>
+                    <div class="absolute top-3 right-3 bg-brand-dark text-brand-creamy text-[10px] font-bold tracking-widest px-3 py-1 rounded-full uppercase">
+                        DROP 01
+                    </div>
+                </div>
+                <div class="p-6 flex flex-col flex-grow space-y-3">
+                    <h3 class="text-lg font-bold text-brand-dark group-hover:text-brand-gold transition-colors">صندوق قصة المولود الفاخر (ثيم ديزني الساحر)</h3>
+                    <p class="text-xs text-brand-dark/60 leading-relaxed flex-grow">
+                        بكج متكامل منسق بعناية يجمع بين طقم بربتوز وبنطلون قطني ناعم، لعبة فيل محشوة صغيرة ولطيفة، طقم مناشف واحتياجات الاستحمام، سلة تنظيم قماشية، كرت خشبي دائري وألبوم توثيق ذكريات الأشهر والسنة الأولى.
+                    </p>
+                    <div class="flex justify-between items-center pt-4 border-t border-brand-nude/50">
+                        <span class="text-base font-bold text-brand-dark">290 ريال سعودي</span>
+                        <button onclick="addToCart('صندوق قصة المولود الفاخر (ثيم ديزني الساحر)', 290)" class="bg-brand-nude text-brand-dark px-4 py-2 rounded-full text-xs font-semibold hover:bg-brand-gold hover:text-brand-dark transition-colors flex items-center gap-1">
+                            <i class="fa-solid fa-plus text-[10px]"></i> إضافة للحقيبة
+                        </button>
+                    </div>
+                </div>
+            </div>
+            </div>
+    </section>
+
+    <div id="cart-drawer" class="fixed top-0 left-0 w-full md:w-[420px] h-full bg-brand-creamy shadow-2xl z-50 transform -translate-x-full transition-transform duration-300 ease-in-out border-r border-brand-nude flex flex-col">
+        <div class="p-6 border-b border-brand-nude/60 flex justify-between items-center bg-brand-nude/20">
+            <h3 class="font-bold text-brand-dark text-base flex items-center gap-2">
+                <i class="fa-solid fa-square-shopping text-brand-gold text-lg"></i> حقيبة هداياك المنسقة
+            </h3>
+            <button onclick="toggleCart()" class="text-brand-dark/60 hover:text-brand-dark text-xl"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+
+        <div id="cart-items" class="flex-grow overflow-y-auto p-6 space-y-4">
+            <div id="empty-cart-msg" class="text-center py-12 text-brand-dark/40 text-sm space-y-2">
+                <i class="fa-solid fa-box-open text-3xl block text-brand-gold/30"></i>
+                <span>حقيبتكِ فارغة تماماً، لم يتم اختيار أي حكاية بعد...</span>
+            </div>
+        </div>
+
+        <div id="card-customization-section" class="p-6 bg-brand-nude/10 border-t border-brand-nude/60 space-y-4 hidden">
+            <div class="text-xs font-bold tracking-wide text-brand-gold"><i class="fa-solid fa-pen-fancy"></i> تخصيص مشاعرك على كرت الواجهة (Front Card)</div>
+            
+            <div class="space-y-2">
+                <input type="text" id="sender-name" placeholder="اسمك (المُرسِل)*" class="w-full bg-white border border-brand-nude/80 rounded-xl px-4 py-2 text-xs focus:outline-none focus:border-brand-gold text-brand-dark">
+                <input type="text" id="receiver-name" placeholder="اسم المهدى إليه (المستلم)*" class="w-full bg-white border border-brand-nude/80 rounded-xl px-4 py-2 text-xs focus:outline-none focus:border-brand-gold text-brand-dark">
+                <textarea id="card-text" placeholder="اكتبي نص مشاعرك هنا ليقوم كاتب المحتوى بتدوينها على الكرت بخط يدوي فاخر..." rows="3" class="w-full bg-white border border-brand-nude/80 rounded-xl px-4 py-2 text-xs focus:outline-none focus:border-brand-gold text-brand-dark resize-none"></textarea>
+            </div>
+        </div>
+
+        <div class="p-6 border-t border-brand-nude/60 bg-white space-y-4">
+            <div class="flex justify-between items-center text-sm font-bold text-brand-dark">
+                <span>المجموع الكلي:</span>
+                <span id="cart-total-price">0 ريال سعودي</span>
+            </div>
+            <button onclick="checkoutViaWhatsApp()" class="w-full bg-brand-dark text-brand-creamy py-3 rounded-full text-xs font-bold hover:bg-brand-gold hover:text-brand-dark transition-all duration-300 tracking-wider shadow-md block text-center">
+                إتمام الطلب وتنسيق كرت الإهداء <i class="fa-brands fa-whatsapp text-sm mr-1"></i>
+            </button>
+        </div>
+    </div>
+
+    <footer class="bg-brand-dark text-brand-creamy/60 py-8 px-6 text-center text-xs space-y-2 border-t border-brand-nude/10">
+        <div class="serif-font text-brand-creamy tracking-widest text-sm font-semibold">GIFT STORY</div>
+        <p class="font-light">جميع الحقوق محفوظة لمتجر قفت ستوري © 2026</p>
+        <p class="text-[10px] text-brand-creamy/30 font-light">تواصل واتساب المبيعات الرسمي: +966 57 636 2810 | البريد: cs@gift-story.com</p>
+    </footer>
+
+    <script>
+        // رقم واتساب الإدارة والمبيعات الرسمي المعتمد تشغيليًا
+        const WHATSAPP_NUMBER = "966576362810";
+        let cart = [];
+
+        function toggleCart() {
+            const drawer = document.getElementById('cart-drawer');
+            drawer.classList.toggle('-translate-x-full');
+        }
+
+        function addToCart(name, price) {
+            // التحقق من تكرار المنتج لمنع الحيازة المتعددة لقطع فريدة
+            const exist = cart.find(item => item.name === name);
+            if (exist) {
+                alert("هذا البكج نادراً ويتوفر منه قطعة واحدة منسقة فقط بالمخزون الحالي.");
+                return;
+            }
+            cart.push({ name, price });
+            updateCartUI();
+            // فتح الحقيبة تلقائيًا لإشعار العميل وحثه على إتمام التخصيص
+            document.getElementById('cart-drawer').classList.remove('-translate-x-full');
+        }
+
+        function removeFromCart(index) {
+            cart.splice(index, 1);
+            updateCartUI();
+        }
+
+        function updateCartUI() {
+            const countElem = document.getElementById('cart-count');
+            const itemsContainer = document.getElementById('cart-items');
+            const emptyMsg = document.getElementById('empty-cart-msg');
+            const totalElem = document.getElementById('cart-total-price');
+            const customSection = document.getElementById('card-customization-section');
+
+            countElem.textContent = cart.length;
+
+            if (cart.length === 0) {
+                itemsContainer.innerHTML = '';
+                itemsContainer.appendChild(emptyMsg);
+                totalElem.textContent = "0 ريال سعودي";
+                customSection.classList.add('hidden');
+                return;
+            }
+
+            if (emptyMsg) emptyMsg.remove();
+            itemsContainer.innerHTML = '';
+            
+            let total = 0;
+            cart.forEach((item, index) => {
+                total += item.price;
+                const div = document.createElement('div');
+                div.className = "flex justify-between items-center bg-white p-3 rounded-xl border border-brand-nude/60 text-xs";
+                div.innerHTML = `
+                    <div class="space-y-1">
+                        <span class="font-bold text-brand-dark block">${item.name}</span>
+                        <span class="text-brand-gold font-medium">${item.price} ريال</span>
+                    </div>
+                    <button onclick="removeFromCart(${index})" class="text-red-400 hover:text-red-600 p-1"><i class="fa-solid fa-trash-can"></i></button>
+                `;
+                itemsContainer.appendChild(div);
+            });
+
+            totalElem.textContent = `${total} ريال سعودي`;
+            customSection.classList.remove('hidden'); // إظهار خانة كرت الإهداء عند توفر عناصر بالسلة
+        }
+
+        function checkoutViaWhatsApp() {
+            if (cart.length === 0) {
+                alert("الحقيبة فارغة، يرجى اختيار مجموعة هدايا أولاً.");
+                return;
+            }
+
+            const sender = document.getElementById('sender-name').value.trim();
+            const receiver = document.getElementById('receiver-name').value.trim();
+            const text = document.getElementById('card-text').value.trim();
+
+            if (!sender || !receiver) {
+                alert("لطفاً، يرجى تعبئة اسم المرسل واسم المهدى إليه لتجهيز كرت الإهداء وتوثيق الطلب بنجاح 🤍.");
+                return;
+            }
+
+            // صياغة رسالة واتساب الإدارية فائقة التنسيق المربوطة تشغيلياً بالهوية
+            let msg = `✨ *طلب هدايا جديد ومخصص - Gift Story* ✨\n\n`;
+            msg += `👤 *المُرسِل:* ${sender}\n`;
+            msg += `🎯 *المهدى إليه (المستلم):* ${receiver}\n\n`;
+            msg += `📦 *المجموعات المطلوبة داخل البوكس الفخم (40×30×10 سم):*\n`;
+            
+            cart.forEach((item, i) => {
+                msg += `${i + 1}. ${item.name} (${item.price} ريال)\n`;
+            });
+
+            let total = cart.reduce((sum, item) => sum + item.price, 0);
+            msg += `\n💵 *المجموع الكلي للحساب:* ${total} ريال سعودي\n\n`;
+            msg += `✉️ *نص كرت الواجهة (المشاعر اليدوية):*\n`;
+            msg += `"${text ? text : 'طلب البوكس بدون كرت إهداء مكتوب'}"\n\n`;
+            msg += `يرجى تأكيد استلام تفاصيل الطلب وتزويدي ببيانات السداد لتجهيز البكج بورق النجوم والستيكر الرسمي وشحنه فوراً 🤍.`;
+
+            // تشفير وتوجيه الرسالة مباشرة إلى رقم مبيعات الإدارة المعتمد
+            const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
+            window.open(url, '_blank');
+        }
+    </script>
+</body>
+</html>

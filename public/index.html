@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gift Story | هدايا فاخرة تحكي قصة</title>
+  <meta name="description" content="Gift Story براند سعودي للهدايا المنسقة بعناية، يبدأ بهدايا الصغار وتجربة تغليف فاخرة حيث كل هدية تحكي قصة." />
+  <meta name="theme-color" content="#FDFBF7" />
+  <meta property="og:title" content="Gift Story | هدايا فاخرة تحكي قصة" />
+  <meta property="og:description" content="هدايا منسقة بعناية، حيث كل هدية تحكي قصة." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="ar_SA" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --off-white: #FDFBF7;
+      --cream: #F6EFE7;
+      --beige: #EFE0D4;
+      --nude: #E8D1C4;
+      --gold: #BFA46A;
+      --gold-soft: rgba(191, 164, 106, 0.22);
+      --brown: #2D2520;
+      --brown-soft: #6E5F57;
+      --line: rgba(45, 37, 32, 0.12);
+      --white: #FFFFFF;
+      --shadow: 0 24px 70px rgba(45, 37, 32, 0.10);
+      --radius-lg: 34px;
+      --radius-md: 22px;
+      --max: 1180px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: 'Tajawal', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: var(--off-white);
+      color: var(--brown);
+      overflow-x: hidden;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; }
+    img { max-width: 100%; display: block; }
+
+    .en {
+      font-family: 'Playfair Display', Georgia, serif;
+      direction: ltr;
+      letter-spacing: 0.08em;
+    }
+
+    .page-note {
+      padding: 10px 18px;
+      background: rgba(191, 164, 106, 0.14);
+      border-bottom: 1px solid var(--line);
+      text-align: center;
+      color: var(--brown-soft);
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(253, 251, 247, 0.92);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 16px 22px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: inline-flex;
+      flex-direction: column;
+      gap: 2px;
+      min-width: max-content;
+    }
+
+    .brand strong {
+      font-family: 'Playfair Display', Georgia, serif;
+      direction: ltr;
+      font-size: 24px;
+      letter-spacing: 0.05em;
+      line-height: 1;
+    }
+
+    .brand span {
+      font-size: 11px;
+      color: var(--gold);
+      letter-spacing: 0.12em;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      color: var(--brown-soft);
+      font-size: 15px;
+    }
+
+    .nav-links a:hover { color: var(--gold); }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .menu-toggle {
+      display: none;
+      width: 44px;
+      height: 44px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: var(--white);
+      color: var(--brown);
+      cursor: pointer;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      min-height: 46px;
+      padding: 13px 22px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      font-weight: 700;
+      line-height: 1;
+      cursor: pointer;
+      transition: transform .2s ease, background .2s ease, border-color .2s ease;
+      white-space: nowrap;
+    }
+
+    .btn:hover { transform: translateY(-2px); }
+
+    .btn-primary {
+      background: var(--brown);
+      color: var(--off-white);
+      box-shadow: 0 18px 34px rgba(45, 37, 32, 0.16);
+    }
+
+    .btn-primary:hover { background: var(--gold); color: var(--brown); }
+
+    .btn-secondary {
+      background: rgba(255,255,255,.68);
+      border-color: var(--line);
+      color: var(--brown);
+    }
+
+    .btn-soft {
+      background: rgba(191, 164, 106, 0.16);
+      border-color: rgba(191, 164, 106, 0.25);
+      color: var(--brown);
+    }
+
+    .hero {
+      position: relative;
+      min-height: calc(100vh - 102px);
+      display: grid;
+      place-items: center;
+      padding: 88px 22px;
+      background:
+        radial-gradient(circle at 12% 18%, rgba(232, 209, 196, 0.55), transparent 30%),
+        radial-gradient(circle at 85% 20%, rgba(191, 164, 106, 0.18), transparent 34%),
+        linear-gradient(180deg, var(--off-white) 0%, var(--cream) 100%);
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      opacity: .32;
+      pointer-events: none;
+      background-image:
+        radial-gradient(circle, rgba(191,164,106,.72) 1px, transparent 1.8px),
+        radial-gradient(circle, rgba(191,164,106,.38) 1px, transparent 1.8px);
+      background-size: 88px 88px, 132px 132px;
+      background-position: 0 0, 44px 54px;
+    }
+
+    .hero-grid {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: var(--max);
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap: 54px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 18px;
+      color: var(--gold);
+      font-weight: 800;
+      font-size: 14px;
+      letter-spacing: .06em;
+    }
+
+    .eyebrow::before, .eyebrow::after {
+      content: "✦";
+      font-size: 12px;
+    }
+
+    h1, h2, h3, p { margin-top: 0; }
+
+    h1 {
+      margin-bottom: 18px;
+      font-size: clamp(46px, 7.2vw, 92px);
+      line-height: .96;
+      font-family: 'Playfair Display', Georgia, serif;
+      direction: ltr;
+      letter-spacing: .04em;
+    }
+
+    .hero h2 {
+      margin-bottom: 18px;
+      font-size: clamp(24px, 3.2vw, 40px);
+      line-height: 1.4;
+      font-weight: 800;
+    }
+
+    .lead {
+      color: var(--brown-soft);
+      font-size: 19px;
+      line-height: 2;
+      max-width: 640px;
+      margin-bottom: 30px;
+    }
+
+    .hero-actions, .section-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .visual-card {
+      position: relative;
+      min-height: 540px;
+      border: 1px solid rgba(191, 164, 106, 0.24);
+      background: linear-gradient(145deg, rgba(255,255,255,.82), rgba(246,239,231,.72));
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      display: grid;
+      place-items: center;
+      padding: 34px;
+    }
+
+    .visual-card::before {
+      content: "";
+      position: absolute;
+      width: 360px;
+      height: 360px;
+      border-radius: 999px;
+      background: rgba(191,164,106,.10);
+      top: -90px;
+      right: -80px;
+    }
+
+    .gift-setup {
+      position: relative;
+      width: min(420px, 84vw);
+      min-height: 420px;
+    }
+
+    .bag {
+      position: absolute;
+      right: 24px;
+      top: 28px;
+      width: 250px;
+      height: 290px;
+      border-radius: 22px 22px 28px 28px;
+      background: linear-gradient(160deg, #FFFDF9, #F4E8DC);
+      border: 1px solid rgba(191,164,106,.34);
+      box-shadow: 0 24px 48px rgba(45,37,32,.12);
+    }
+
+    .bag::before {
+      content: "";
+      position: absolute;
+      top: -30px;
+      right: 72px;
+      width: 100px;
+      height: 56px;
+      border: 3px solid rgba(191,164,106,.52);
+      border-bottom: 0;
+      border-radius: 60px 60px 0 0;
+    }
+
+    .bag::after {
+      content: "Gift Story";
+      position: absolute;
+      inset: 0;
+      display: grid;
+      place-items: center;
+      font-family: 'Playfair Display', Georgia, serif;
+      direction: ltr;
+      color: var(--gold);
+      letter-spacing: .08em;
+      font-size: 24px;
+    }
+
+    .box {
+      position: absolute;
+      left: 18px;
+      bottom: 28px;
+      width: 285px;
+      height: 155px;
+      border-radius: 24px;
+      background: linear-gradient(145deg, #FFF, #F3E7DA);
+      border: 1px solid rgba(191,164,106,.32);
+      box-shadow: 0 28px 55px rgba(45,37,32,.16);
+      transform: rotate(-4deg);
+    }
+
+    .box::before {
+      content: "";
+      position: absolute;
+      inset: 50% 0 auto 0;
+      height: 1px;
+      background: rgba(191,164,106,.34);
+    }
+
+    .box::after {
+      content: "WHERE EVERY GIFT TELLS A STORY";
+      position: absolute;
+      bottom: 28px;
+      left: 24px;
+      right: 24px;
+      color: var(--gold);
+      font-family: 'Playfair Display', Georgia, serif;
+      direction: ltr;
+      letter-spacing: .10em;
+      font-size: 10px;
+      text-align: center;
+    }
+
+    .card {
+      position: absolute;
+      left: 92px;
+      top: 168px;
+      width: 140px;
+      height: 92px;
+      border-radius: 16px;
+      background: #FFFDF9;
+      border: 1px solid rgba(191,164,106,.36);
+      box-shadow: 0 15px 30px rgba(45,37,32,.10);
+      transform: rotate(7deg);
+    }
+
+    .card::after {
+      content: "✦ Gift Card";
+      position: absolute;
+      inset: 0;
+      display: grid;
+      place-items: center;
+      color: var(--gold);
+      font-size: 13px;
+    }
+
+    .section {
+      padding: 94px 22px;
+    }
+
+    .section.alt { background: var(--cream); }
+    .section.nude { background: linear-gradient(180deg, var(--cream), var(--beige)); }
+
+    .container {
+      max-width: var(--max);
+      margin: 0 auto;
+    }
+
+    .section-heading {
+      max-width: 760px;
+      margin: 0 auto 42px;
+      text-align: center;
+    }
+
+    .section-heading h2 {
+      font-size: clamp(30px, 4vw, 52px);
+      line-height: 1.35;
+      margin-bottom: 14px;
+    }
+
+    .section-heading p {
+      margin: 0 auto;
+      color: var(--brown-soft);
+      font-size: 18px;
+      line-height: 2;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+      align-items: center;
+    }
+
+    .panel, .feature, .story-card, .policy-card, .faq-item {
+      background: rgba(255,255,255,.72);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      box-shadow: 0 16px 42px rgba(45, 37, 32, 0.06);
+    }
+
+    .feature, .story-card, .policy-card { padding: 28px; }
+
+    .feature .icon, .story-card .icon {
+      color: var(--gold);
+      font-size: 25px;
+      margin-bottom: 15px;
+    }
+
+    .feature h3, .story-card h3, .policy-card h3 {
+      margin-bottom: 10px;
+      font-size: 22px;
+      line-height: 1.4;
+    }
+
+    .feature p, .story-card p, .policy-card p {
+      margin: 0;
+      color: var(--brown-soft);
+      line-height: 1.9;
+    }
+
+    .current-story {
+      padding: 36px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .current-story::before {
+      content: "Little Stories";
+      position: absolute;
+      left: 28px;
+      top: 24px;
+      font-family: 'Playfair Display', Georgia, serif;
+      direction: ltr;
+      color: rgba(191,164,106,.14);
+      font-size: 62px;
+      white-space: nowrap;
+    }
+
+    .soft-list {
+      display: grid;
+      gap: 13px;
+      margin: 24px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .soft-list li {
+      position: relative;
+      padding: 14px 18px;
+      border-radius: 18px;
+      background: rgba(253, 251, 247, .76);
+      border: 1px solid var(--line);
+      color: var(--brown-soft);
+      line-height: 1.7;
+    }
+
+    .packaging-visual {
+      min-height: 420px;
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(191,164,106,.24);
+      background:
+        radial-gradient(circle at 25% 20%, rgba(191,164,106,.12), transparent 30%),
+        linear-gradient(145deg, #FFFDF9, #F0E0D2);
+      box-shadow: var(--shadow);
+      display: grid;
+      place-items: center;
+      padding: 28px;
+      text-align: center;
+      color: var(--brown-soft);
+    }
+
+    .packaging-visual strong {
+      display: block;
+      margin-bottom: 10px;
+      color: var(--brown);
+      font-size: 24px;
+    }
+
+    .dimension-cards {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+      margin-top: 22px;
+    }
+
+    .dimension-card {
+      padding: 18px;
+      border-radius: 20px;
+      background: rgba(255,255,255,.72);
+      border: 1px solid var(--line);
+    }
+
+    .dimension-card b {
+      display: block;
+      margin-bottom: 5px;
+      color: var(--brown);
+    }
+
+    .dimension-card span {
+      color: var(--gold);
+      font-weight: 800;
+      direction: ltr;
+      display: inline-block;
+    }
+
+    .note-box {
+      margin-top: 22px;
+      padding: 20px;
+      border-radius: 22px;
+      background: rgba(191,164,106,.12);
+      border: 1px solid rgba(191,164,106,.20);
+      color: var(--brown-soft);
+      line-height: 1.9;
+    }
+
+    .coming-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    .coming-card {
+      padding: 24px;
+      border-radius: 24px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.62);
+      text-align: center;
+      min-height: 145px;
+      display: grid;
+      align-content: center;
+      gap: 8px;
+    }
+
+    .coming-card span {
+      color: var(--gold);
+      font-weight: 800;
+      font-size: 13px;
+    }
+
+    .request-panel {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 30px;
+      padding: 36px;
+      align-items: center;
+    }
+
+    .request-box {
+      background: rgba(253,251,247,.78);
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      padding: 28px;
+    }
+
+    .request-box label {
+      display: block;
+      color: var(--brown-soft);
+      margin-bottom: 8px;
+      font-weight: 700;
+    }
+
+    .request-box input, .request-box textarea, .request-box select {
+      width: 100%;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 14px 16px;
+      background: var(--white);
+      color: var(--brown);
+      margin-bottom: 14px;
+      outline: none;
+    }
+
+    .request-box textarea { min-height: 110px; resize: vertical; }
+
+    .request-placeholder {
+      margin: 0 0 18px;
+      color: var(--brown-soft);
+      line-height: 1.9;
+    }
+
+    .faq-list { display: grid; gap: 14px; }
+
+    .faq-item { padding: 22px 24px; }
+    .faq-item h3 { margin-bottom: 8px; font-size: 19px; }
+    .faq-item p { margin: 0; color: var(--brown-soft); line-height: 1.9; }
+
+    .footer {
+      padding: 58px 22px;
+      background: var(--brown);
+      color: var(--off-white);
+    }
+
+    .footer-grid {
+      max-width: var(--max);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.2fr .8fr .8fr;
+      gap: 28px;
+      align-items: start;
+    }
+
+    .footer p, .footer a { color: rgba(253,251,247,.72); line-height: 1.9; }
+    .footer h3 { color: var(--off-white); margin-bottom: 12px; }
+    .footer-links { display: grid; gap: 10px; }
+    .copyright { margin-top: 36px; padding-top: 22px; border-top: 1px solid rgba(253,251,247,.14); color: rgba(253,251,247,.52); font-size: 14px; }
+
+    @media (max-width: 980px) {
+      .nav { flex-wrap: wrap; }
+      .menu-toggle { display: inline-grid; place-items: center; }
+      .nav-links {
+        display: none;
+        width: 100%;
+        order: 3;
+        flex-direction: column;
+        align-items: stretch;
+        padding-top: 12px;
+      }
+      .nav-links.open { display: flex; }
+      .nav-links a { padding: 12px 0; border-bottom: 1px solid var(--line); }
+      .hero-grid, .grid-2, .request-panel, .footer-grid { grid-template-columns: 1fr; }
+      .hero { padding-top: 60px; }
+      .visual-card { min-height: 470px; }
+      .grid-3 { grid-template-columns: 1fr; }
+      .coming-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 620px) {
+      .page-note { font-size: 13px; }
+      .nav { padding: 14px 16px; }
+      .brand strong { font-size: 21px; }
+      .header-actions .btn { display: none; }
+      .hero, .section { padding-left: 16px; padding-right: 16px; }
+      .hero-actions, .section-actions { display: grid; }
+      .btn { width: 100%; }
+      .lead { font-size: 17px; }
+      .visual-card { min-height: 390px; padding: 22px; }
+      .gift-setup { transform: scale(.78); }
+      .dimension-cards, .coming-grid { grid-template-columns: 1fr; }
+      .current-story, .request-panel { padding: 24px; }
+      .current-story::before { font-size: 42px; left: 18px; top: 20px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-note">الأسعار والتوفر تظهر داخل منصة البيع الرسمية. الموقع هنا للتعريف بعالم Gift Story وتجربة الهدية.</div>
+
+  <header class="site-header">
+    <nav class="nav" aria-label="التنقل الرئيسي">
+      <a class="brand" href="#top" aria-label="Gift Story Home">
+        <strong>Gift Story</strong>
+        <span class="en">WHERE EVERY GIFT TELLS A STORY</span>
+      </a>
+
+      <button class="menu-toggle" type="button" aria-label="فتح القائمة" aria-controls="navLinks" aria-expanded="false">☰</button>
+
+      <div class="nav-links" id="navLinks">
+        <a href="#little-stories">هدايا الصغار</a>
+        <a href="#packaging">تجربة التغليف</a>
+        <a href="#previous-stories">قصص سابقة</a>
+        <a href="#special-request">طلب قصة خاصة</a>
+        <a href="#policies">السياسات</a>
+        <a href="#contact">تواصل</a>
+      </div>
+
+      <div class="header-actions">
+        <a class="btn btn-primary" href="https://shop.gift-story.com" target="_blank" rel="noopener">تسوّقي القصة الحالية</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="heroTitle">
+      <div class="hero-grid">
+        <div>
+          <div class="eyebrow">قفت ستوري</div>
+          <h1 id="heroTitle">Gift Story</h1>
+          <h2>هدايا منسقة بعناية، حيث كل هدية تحكي قصة.</h2>
+          <p class="lead">نصنع تجربة إهداء فاخرة وهادئة تبدأ من اختيار القصة، وتكتمل بتغليف أنيق وكرت إهداء وتفاصيل تصل جاهزة للتقديم.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="https://shop.gift-story.com" target="_blank" rel="noopener">تسوّقي القصة الحالية</a>
+            <a class="btn btn-secondary" href="#special-request">طلب قصة خاصة</a>
+          </div>
+        </div>
+        <div class="visual-card" aria-label="تصور بصري لتغليف Gift Story">
+          <div class="gift-setup" aria-hidden="true">
+            <div class="bag"></div>
+            <div class="card"></div>
+            <div class="box"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="promiseTitle">
+      <div class="container">
+        <div class="section-heading">
+          <h2 id="promiseTitle">ليست هدية فقط، بل بداية قصة.</h2>
+          <p>Gift Story تجربة إهداء مصممة بعناية لتناسب المناسبات التي تستحق حضورًا أهدأ، أرقى، وأكثر اكتمالًا.</p>
+        </div>
+        <div class="grid-3">
+          <article class="feature">
+            <div class="icon">✦</div>
+            <h3>تنسيق مختار</h3>
+            <p>كل قصة تُبنى بتوازن بين القطع، الألوان، وطريقة ظهور الهدية عند فتحها.</p>
+          </article>
+          <article class="feature">
+            <div class="icon">☾</div>
+            <h3>تغليف جاهز للتقديم</h3>
+            <p>العلبة، الكيس، ورق التغليف، الستيكر، وكرت الإهداء تعمل معًا كتجربة واحدة.</p>
+          </article>
+          <article class="feature">
+            <div class="icon">✧</div>
+            <h3>إصدارات محدودة</h3>
+            <p>نؤمن بالقصص المحدودة، لأن الهدية الأجمل لا تحتاج أن تتكرر بنفس التفاصيل دائمًا.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="little-stories" aria-labelledby="littleStoriesTitle">
+      <div class="container">
+        <div class="grid-2">
+          <div class="panel current-story">
+            <div class="eyebrow">القصة الحالية</div>
+            <h2 id="littleStoriesTitle">هدايا الصغار</h2>
+            <p class="lead">قصص ناعمة للمولود والطفل، منسقة بعناية لتصل كهدية كاملة.</p>
+            <ul class="soft-list">
+              <li>مناسبة لتهنئة المولود، زيارة أم جديدة، أو هدية طفل أنيقة.</li>
+              <li>تعتمد على قطع مختارة وتغليف Gift Story الجاهز للتقديم.</li>
+              <li>تتوفر بكميات محدودة، وقد لا تتكرر بنفس التفاصيل بعد نفاد القطع.</li>
+            </ul>
+            <div class="section-actions" style="margin-top: 26px;">
+              <a class="btn btn-primary" href="https://shop.gift-story.com" target="_blank" rel="noopener">تسوّقي القصة الحالية</a>
+              <a class="btn btn-secondary" href="#packaging">شاهدي تجربة التغليف</a>
+            </div>
+          </div>
+          <div class="packaging-visual">
+            <div>
+              <strong>Little Stories</strong>
+              <p>مساحة مخصصة لاحقًا لصورة حقيقية من صندوق هدايا الصغار أو لقطة تغليف ناعمة.</p>
+              <div class="note-box">لا تستخدمي هنا صور خام، أسعار، تاقات، أو أي مصدر شراء ظاهر.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="whyTitle">
+      <div class="container">
+        <div class="section-heading">
+          <h2 id="whyTitle">ما الذي يجعل Gift Story مختلفة؟</h2>
+          <p>نركز على لحظة الإهداء كاملة: اختيار الفكرة، هدوء التفاصيل، نظافة التقديم، وشعور المستلم عند وصول الهدية.</p>
+        </div>
+        <div class="grid-3">
+          <article class="feature"><h3>ليست تجميع منتجات</h3><p>كل صندوق يُرى كقصة متكاملة، لا كقطع متفرقة داخل علبة.</p></article>
+          <article class="feature"><h3>مظهر فاخر وهادئ</h3><p>ألوان ناعمة، مساحات مريحة، وتفاصيل ذهبية مطفية تناسب الهوية.</p></article>
+          <article class="feature"><h3>وضوح تشغيلي</h3><p>الطلب، الدفع، والسياسات تكون واضحة حتى تبقى التجربة راقية من البداية للنهاية.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section nude" id="packaging" aria-labelledby="packagingTitle">
+      <div class="container">
+        <div class="grid-2">
+          <div>
+            <div class="eyebrow">تجربة التغليف</div>
+            <h2 id="packagingTitle">أول لحظة في الهدية تبدأ قبل فتح الصندوق.</h2>
+            <p class="lead">في Gift Story، التغليف جزء أساسي من قيمة الهدية: كيس خارجي، علبة داخلية، ورق تغليف، ستيكر، وكرت إهداء.</p>
+            <div class="dimension-cards">
+              <div class="dimension-card"><b>العلبة الداخلية</b><span>40 × 30 × 10 cm</span></div>
+              <div class="dimension-card"><b>الكيس الخارجي</b><span>45 × 33 × 15 cm</span></div>
+            </div>
+            <div class="note-box">قد تختلف بعض التفاصيل اللونية بين العروض الرقمية والتغليف المطبوع، حيث تعتمد Gift Story في التغليف الفعلي على طباعة فاخرة بلون ذهبي موحد حسب مواصفات الإنتاج.</div>
+          </div>
+          <div class="packaging-visual">
+            <div>
+              <strong>Packaging Experience</strong>
+              <p>يُستخدم تغليف حماية خارجي عند الحاجة أثناء التوصيل أو الشحن للحفاظ على نظافة وأناقة التغليف الأساسي.</p>
+              <p>تغليف الحماية لوجستي فقط، وليس جزءًا من هوية الفتح الفاخرة.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="previous-stories" aria-labelledby="previousTitle">
+      <div class="container">
+        <div class="section-heading">
+          <h2 id="previousTitle">قصص سابقة</h2>
+          <p>مساحة إلهام تعرض نماذج من عالم Gift Story. القصص السابقة قد لا تتكرر بنفس التفاصيل حسب توفر القطع.</p>
+        </div>
+        <div class="grid-3">
+          <article class="story-card"><div class="icon">✦</div><h3>قصة مولود ناعمة</h3><p>إلهام لهدية هادئة بتفاصيل مناسبة للمولود أو الزيارة الأولى.</p></article>
+          <article class="story-card"><div class="icon">☾</div><h3>قصة محايدة</h3><p>اتجاه ناعم يناسب الهدايا الراقية بدون ألوان صارخة أو تفاصيل مزدحمة.</p></article>
+          <article class="story-card"><div class="icon">✧</div><h3>قصة مستوحاة</h3><p>يمكن استخدام القصص السابقة كمرجع عند إرسال طلب قصة خاصة.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" aria-labelledby="comingTitle">
+      <div class="container">
+        <div class="section-heading">
+          <h2 id="comingTitle">قصص قادمة</h2>
+          <p>تظهر هذه التصنيفات كاتجاهات مستقبلية فقط، ولا تصبح متاحة للبيع إلا بعد تجهيز المنتجات والصور والتسعير.</p>
+        </div>
+        <div class="coming-grid">
+          <div class="coming-card"><span>Coming Soon</span><b>قصص العناية</b></div>
+          <div class="coming-card"><span>Coming Soon</span><b>قصص التخرج</b></div>
+          <div class="coming-card"><span>Coming Soon</span><b>قصص أعياد الميلاد</b></div>
+          <div class="coming-card"><span>Coming Soon</span><b>قصص من السفر</b></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="special-request" aria-labelledby="requestTitle">
+      <div class="container">
+        <div class="panel request-panel">
+          <div>
+            <div class="eyebrow">طلب قصة خاصة</div>
+            <h2 id="requestTitle">للمناسبات التي تحتاج تفاصيل أكثر خصوصية.</h2>
+            <p class="lead">يمكنك إرسال فكرة هدية خاصة، وسنراجع إمكانية تنفيذها حسب توفر القطع، الوقت، والميزانية المناسبة.</p>
+            <div class="note-box">إرسال الطلب لا يعني تأكيده مباشرة. تتم مراجعة الطلب أولًا حسب التوفر وإمكانية التنفيذ، ثم يتم اعتماد السعر والدفع قبل التجهيز.</div>
+          </div>
+          <div class="request-box" aria-label="نموذج طلب قصة خاصة تجريبي">
+            <p class="request-placeholder">هذا نموذج واجهة جاهز للربط لاحقًا مع Google Forms أو Typeform أو نموذج الموقع الرسمي.</p>
+            <label for="name">الاسم الكامل</label>
+            <input id="name" type="text" placeholder="اكتبي اسمك الكامل" />
+            <label for="occasion">نوع المناسبة</label>
+            <select id="occasion">
+              <option>تهنئة مولود</option>
+              <option>هدية طفل</option>
+              <option>تخرج</option>
+              <option>عيد ميلاد</option>
+              <option>أخرى</option>
+            </select>
+            <label for="details">تفاصيل مختصرة</label>
+            <textarea id="details" placeholder="اكتبي الفكرة، الموعد، والميزانية التقريبية"></textarea>
+            <button class="btn btn-soft" type="button" aria-disabled="true">سيتم ربط النموذج لاحقًا</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="policies" aria-labelledby="policiesTitle">
+      <div class="container">
+        <div class="section-heading">
+          <h2 id="policiesTitle">سياسات مختصرة</h2>
+          <p>نوضح أهم النقاط قبل الطلب حتى تكون تجربة Gift Story واضحة وراقية.</p>
+        </div>
+        <div class="grid-3">
+          <article class="policy-card"><h3>الاسترجاع والاستبدال</h3><p>لا يمكن الاسترجاع أو الاستبدال بعد خروج الطلب من مقر التجهيز، إلا في حال وجود خطأ واضح من Gift Story أو حسب ما تقتضيه الأنظمة.</p></article>
+          <article class="policy-card"><h3>اختلاف المحتوى</h3><p>قد تختلف بعض تفاصيل المحتوى حسب توفر القطع، مع الحفاظ على نفس مستوى التنسيق والفخامة في كل قصة.</p></article>
+          <article class="policy-card"><h3>الطلبات الخاصة</h3><p>تحتاج الطلبات الخاصة إلى مراجعة قبل القبول، ولا يبدأ التجهيز إلا بعد اعتماد التفاصيل والسعر والدفع.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact" aria-labelledby="contactTitle">
+      <div class="container">
+        <div class="section-heading">
+          <h2 id="contactTitle">تواصلي معنا</h2>
+          <p>للطلبات الجاهزة استخدمي منصة البيع الرسمية. وللطلبات الخاصة ابدئي من النموذج حتى نحافظ على ترتيب التفاصيل.</p>
+        </div>
+        <div class="grid-2">
+          <article class="feature">
+            <h3>منصة البيع الرسمية</h3>
+            <p>الأسعار، التوفر، الدفع، والطلبات تظهر داخل المتجر الرسمي.</p>
+            <div class="section-actions" style="margin-top: 20px;"><a class="btn btn-primary" href="https://shop.gift-story.com" target="_blank" rel="noopener">تسوّقي القصة الحالية</a></div>
+          </article>
+          <article class="feature">
+            <h3>دعم ثانوي</h3>
+            <p>واتساب Gift Story مخصص للحالات التي تحتاج توضيحًا أو متابعة بعد الطلب، وليس بديلًا عن منصة البيع الرسمية.</p>
+            <div class="section-actions" style="margin-top: 20px;"><a class="btn btn-secondary" href="https://wa.me/966576362810" target="_blank" rel="noopener">واتساب الدعم</a></div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <h3 class="en">Gift Story</h3>
+        <p class="en">WHERE EVERY GIFT TELLS A STORY</p>
+        <p>هدايا منسقة بعناية، حيث كل هدية تحكي قصة.</p>
+      </div>
+      <div>
+        <h3>روابط</h3>
+        <div class="footer-links">
+          <a href="#little-stories">هدايا الصغار</a>
+          <a href="#packaging">تجربة التغليف</a>
+          <a href="#special-request">طلب قصة خاصة</a>
+          <a href="#policies">السياسات</a>
+        </div>
+      </div>
+      <div>
+        <h3>الطلب</h3>
+        <div class="footer-links">
+          <a href="https://shop.gift-story.com" target="_blank" rel="noopener">تسوّقي القصة الحالية</a>
+          <a href="#contact">تواصل</a>
+        </div>
+      </div>
+    </div>
+    <div class="container copyright">© 2026 Gift Story. جميع الحقوق محفوظة.</div>
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('#navLinks');
+
+    toggle?.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', String(isOpen));
+    });
+
+    navLinks?.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        toggle?.setAttribute('aria-expanded', 'false');
+      });
+    });
+  </script>
+</body>
+</html>
